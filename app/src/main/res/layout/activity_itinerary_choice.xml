@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ItineraryChoice">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listViewExperiences"
+        android:layout_width="match_parent"
+        android:layout_height="678dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="53dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:divider="@color/black_overlay"
+        android:dividerHeight="15dp"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainColor"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        app:tabTextColor="@color/white">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/feedTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Feed" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/exploreTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore"/>
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/shareTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share" />
+    </android.support.design.widget.TabLayout>
+
+</RelativeLayout>

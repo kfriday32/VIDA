@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_centerHorizontal="true"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="10"
+                android:text="Welcome!"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:text="Popular LINES for 'Outdoors'"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listViewExperiences"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:divider="@color/black_overlay"
+                android:scrollbars="horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="5"
+                android:text="Popular LINES for 'Bars'"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/barExperiences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@color/black_overlay"
+                android:scrollbars="horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainColor"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/white">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/feedTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Feed"/>
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/exploreTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore"/>
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/shareTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share" />
+    </android.support.design.widget.TabLayout>
+
+</RelativeLayout>

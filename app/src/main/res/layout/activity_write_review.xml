@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".WriteReview"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Write Your LINE"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Profile Name"
+            android:id="@+id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Type of Experience"
+            android:id="@+id/type"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Location (City, State)"
+            android:id="@+id/location"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Rating"
+            android:id="@+id/rating"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:inputType="number"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description of Activity"
+            android:id="@+id/description"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/black"
+            android:inputType="textMultiLine"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="40dp"
+            android:text="Share LINE!"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:id="@+id/submit"
+            android:textColor="@color/black"
+            android:background="@drawable/submit_button"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/mainColor"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/white">
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/feedTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Feed"/>
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/exploreTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Explore"/>
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/shareTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share" />
+            </android.support.design.widget.TabLayout>
+
+        </RelativeLayout>
+
+</LinearLayout>

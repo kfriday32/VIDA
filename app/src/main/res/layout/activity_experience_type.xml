@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:layout_centerHorizontal="true"
+    tools:context=".ExperienceType"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginTop="69dp"
+        android:text="@string/filters"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/city_input"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button_shapes"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:hint="@string/city_hint"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:visibility="visible"
+        android:layout_below="@id/label"
+        android:dropDownHeight="40dp"
+        android:dropDownAnchor="@id/city_input"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/type_input"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/city_input"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/button_shapes"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:hint="@string/type_hint"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:visibility="visible"
+        android:dropDownHeight="40dp"
+        android:dropDownAnchor="@id/type_input"/>
+
+    <TextView
+        android:id="@+id/activate_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_shapes"
+        android:text="Find LINES!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:background="@color/mainColor"
+        android:layout_weight="0.1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/white">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/feedTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Feed"/>
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/exploreTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/shareTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share"/>
+    </android.support.design.widget.TabLayout>
+</LinearLayout>
